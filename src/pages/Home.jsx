@@ -4,8 +4,10 @@ import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { getProducts } from "../firebase/firestore"
 import ProductCard from "../components/ProductCard"
+
 import LoadingSpinner from "../components/LoadingSpinner"
 import "../styles/Home.css"
+
 
 const Home = () => {
   const [featuredProducts, setFeaturedProducts] = useState([])
@@ -15,6 +17,7 @@ const Home = () => {
     const fetchFeaturedProducts = async () => {
       try {
         const products = await getProducts()
+   //   const products = SAMPLE_PRODUCTS;
         setFeaturedProducts(products.slice(0, 4)) // Show first 4 products as featured
       } catch (error) {
         console.error("Error fetching featured products:", error)

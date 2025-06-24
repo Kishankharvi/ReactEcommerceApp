@@ -1,7 +1,9 @@
 import { collection, doc, getDocs, getDoc, addDoc, updateDoc, query, where, orderBy } from "firebase/firestore"
 import { db } from "./config"
+import { seedProducts } from "./seedData" // Uncomment this line to seed products
 
 // Products
+//seedProducts();
 export const getProducts = async () => {
   try {
     const querySnapshot = await getDocs(collection(db, "products"))

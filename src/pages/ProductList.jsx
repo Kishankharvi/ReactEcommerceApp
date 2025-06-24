@@ -5,6 +5,8 @@ import { useSearchParams } from "react-router-dom"
 import { getProducts } from "../firebase/firestore"
 import ProductCard from "../components/ProductCard"
 import LoadingSpinner from "../components/LoadingSpinner"
+
+
 import "../styles/ProductList.css"
 
 const ProductList = () => {
@@ -18,7 +20,10 @@ const ProductList = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
+       //
         const productsData = await getProducts()
+      // const productsData = SAMPLE_PRODUCTS 
+       console.log(productsData);// Use sample data for now
         setProducts(productsData)
         setFilteredProducts(productsData)
       } catch (error) {
