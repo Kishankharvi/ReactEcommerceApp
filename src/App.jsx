@@ -55,7 +55,7 @@ function App() {
                 <Route path="/profile" element={user ? <Profile /> : <Navigate to="/login" />} />
               </Routes>
             </main>
-          </div>
+          </div>hhgsdhg
         </Router>
       </CartProvider>
     </AuthProvider>
