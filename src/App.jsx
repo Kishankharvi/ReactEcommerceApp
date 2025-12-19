@@ -16,7 +16,7 @@ import Profile from "./pages/Profile"
 import { CartProvider } from "./utils/CartContext"
 import { AuthProvider } from "./utils/AuthContext"
 import LoadingSpinner from "./components/LoadingSpinner"
-import "./styles/App.css"
+import "./styles/App.css"    
 
 
 function App() {
@@ -55,7 +55,7 @@ function App() {
                 <Route path="/profile" element={user ? <Profile /> : <Navigate to="/login" />} />
               </Routes>
             </main>
-          </div>
+          </div>hhgsdhg
         </Router>
       </CartProvider>
     </AuthProvider>
